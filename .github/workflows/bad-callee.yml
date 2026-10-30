@@ -1,0 +1,9 @@
+name: bad callee
+on:
+  workflow_call:
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hi
+     bad-indent: [
