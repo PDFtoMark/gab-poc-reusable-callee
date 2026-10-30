@@ -1,0 +1,15 @@
+name: demo callee
+on:
+  workflow_call:
+    inputs:
+      debug:
+        type: boolean
+        default: false
+    secrets:
+      TOKEN:
+        required: false
+jobs:
+  show:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "callee ran debug=${{ inputs.debug }}"
