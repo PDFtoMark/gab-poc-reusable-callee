@@ -1,0 +1,7 @@
+name: call bad input
+on: [push, workflow_dispatch]
+jobs:
+  call:
+    uses: PDFtoMark/gab-poc-reusable-callee/.github/workflows/callee.yml@main
+    with:
+      whatever: 1
