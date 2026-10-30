@@ -1,0 +1,8 @@
+name: guard skip probe
+on: [push, workflow_dispatch]
+jobs:
+  gated:
+    if: github.repository_owner == 'Adobe-Enterprise-Docs'
+    uses: Adobe-Enterprise-Docs/workflows/.github/workflows/auto-approve-merge.yml@main
+    with:
+      pr-number: 1
