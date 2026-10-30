@@ -1,0 +1,7 @@
+name: self call control
+on: [push, workflow_dispatch]
+jobs:
+  call:
+    uses: PDFtoMark/gab-poc-reusable-callee/.github/workflows/callee.yml@main
+    with:
+      debug: true
