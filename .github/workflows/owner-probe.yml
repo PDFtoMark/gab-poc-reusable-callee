@@ -1,0 +1,10 @@
+name: owner probe
+on: [push, workflow_dispatch]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print owner and guard
+        run: |
+          echo "owner=${{ github.repository_owner }}"
+          echo "guard_adobe_enterprise=${{ github.repository_owner == 'Adobe-Enterprise-Docs' }}"
